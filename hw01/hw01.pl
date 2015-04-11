@@ -18,7 +18,7 @@ sub printTheaterInform {
 		# 戲院名稱
 		# <span class="at21b">XXX</span>
 		($title)=($doc =~ /\<span class="at21b"\>(.*)\<\/span\>/);
-		print "$title\n";
+		print "【$title】\n";
 		# 電影名稱
 		# <a href="/movie/fsen32872750/">笑笑羊大電影</a> 
 		while ($doc =~ /\<a href="\/movie\/\S+\/"\>\S+\<\/a\>/s) {
@@ -29,7 +29,7 @@ sub printTheaterInform {
 			($tmp, $name, $tmp)
 				= ($doc =~ /\<a href="\/movie\/(\S+)\/"\>(\S+)\<\/a\>(.*)/s);
 			#print '[debug] $name = ';
-			print "$name\n";
+			print "- $name -\n";
 			$doc = $tmp; # search 
 			# 時間表
 			#<UL>
@@ -49,12 +49,11 @@ sub printTheaterInform {
 				print "$time\n";
 			}
 		}
-		print "\n";
+		print "--- ### ---\n\n";
 	}
 }
 
 package main;
-print "== begin of perl ==\n";
 
 my @url;
 $url[0] = 'http://www.atmovies.com.tw/showtime/theater_t06608_a06.html'; # 台南國賓影城
@@ -62,5 +61,3 @@ $url[1] = 'http://www.atmovies.com.tw/showtime/theater_t06607_a06.html'; # 台�
 $url[2] = 'http://www.atmovies.com.tw/showtime/theater_t06609_a06.html'; # 台南威秀影城
 
 printTheaterInform( @url );
-
-print "=== end of perl ===\n";
