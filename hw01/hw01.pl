@@ -38,13 +38,11 @@ sub printTheaterInform {
 			#	<LI>14：35
 			#		</LI>
 			#</UL>
-			if ( $doc =~ /\<LI\>(\S*(\s*\<\/LI\>\s*\<LI\>\S*\s*)*)+\s*\<\/LI\>/s ) {
-				# <LI>(\S*(\s*</LI>\s*<LI>\S*\s*)*)+\s*</LI>
-				($time)=($doc =~ /\<LI\>((\S*(\s*\<\/LI\>\s*\<LI\>\S*\s*)*)+)\s*\<\/LI\>/s);
-				$time =~ s/[ \r\n\t]//g;
-				$time =~ s/<\/LI><LI>/\n/g;
-				print "$time\n";
-			}
+			# <LI>(\S*(\s*</LI>\s*<LI>\S*\s*)*)+\s*</LI>
+			($time)=($doc =~ /\<LI\>((\S*(\s*\<\/LI\>\s*\<LI\>\S*\s*)*)+)\s*\<\/LI\>/s);
+			$time =~ s/[ \r\n\t]//g;
+			$time =~ s/<\/LI><LI>/\n/g;
+			print "$time\n";
 		}
 		print "--- ### ---\n\n";
 	}
