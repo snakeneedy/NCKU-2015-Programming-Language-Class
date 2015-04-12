@@ -1,10 +1,9 @@
 use strict;
 use warnings;
 use LWP::Simple; # get
-use utf8; # for 'Wide character in print'
-use feature 'unicode_strings';
+use utf8;
 binmode(STDIN, ':encoding(utf8)');
-binmode(STDOUT, ':encoding(utf8)');
+binmode(STDOUT, ':encoding(utf8)'); # for 'Wide character in print'
 binmode(STDERR, ':encoding(utf8)');
 
 sub printTheaterInform {
