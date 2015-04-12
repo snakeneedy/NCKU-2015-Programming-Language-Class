@@ -12,7 +12,6 @@ sub printTheaterInform {
 		#print '[debug] $inUrl = ' . $inUrl . "\n";
 		# init
 		my $doc = get $inUrl;
-		my $docBak = $doc;
 		my $title;
 		my $name;
 		# 戲院名稱
@@ -26,8 +25,8 @@ sub printTheaterInform {
 			my $tmp;
 			my $time;
 
-			($tmp, $name, $tmp)
-				= ($doc =~ /\<a href="\/movie\/(\S+)\/"\>(\S+)\<\/a\>(.*)/s);
+			($name, $tmp)
+				= ($doc =~ /\<a href="\/movie\/\S+\/"\>(\S+)\<\/a\>(.*)/s);
 			#print '[debug] $name = ';
 			print "- $name -\n";
 			$doc = $tmp; # search 
