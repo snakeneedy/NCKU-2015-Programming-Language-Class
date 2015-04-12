@@ -9,7 +9,6 @@ binmode(STDERR, ':encoding(utf8)');
 
 sub printTheaterInform {
 	foreach my $inUrl (@_) {
-		#print '[debug] $inUrl = ' . $inUrl . "\n";
 		# init
 		my $doc = get $inUrl;
 		my $title;
@@ -51,8 +50,6 @@ sub printTheaterInform {
 		print "--- ### ---\n\n";
 	}
 }
-
-package main;
 
 my @url;
 $url[0] = 'http://www.atmovies.com.tw/showtime/theater_t06608_a06.html'; # 台南國賓影城
