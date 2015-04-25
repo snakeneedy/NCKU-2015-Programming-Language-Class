@@ -32,14 +32,7 @@
 ;   return result
 ;
 (defun readList (N)
-	(
-		let (
-			(lst 
-				(loop for i from 1 to N collect (read)) 
-			) 
-		)
-	lst
-	)
+	(loop for i from 1 to N collect (read)) 
 )
 (defun half (x)
 	(floor (/ x 2))
