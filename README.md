@@ -1,9 +1,10 @@
-NCKU-2015-Programming-Language-Class
-==========
+# NCKU-2015-Programming-Language-Class
+
 國立成功大學2015年程式語言課程
 
-hw01 (perl)
------
+## hw01 (perl)
+
+*deadline 2015/04/12 Sun. 22:00*
 **作業需求**：使用`Perl`從影城網頁中擷取當日電影的演出時間
 
 ### 原始碼規則
@@ -55,3 +56,17 @@ http://www.atmovies.com.tw/showtime/theater_t06607_a06.html
 
 台南威秀影城
 http://www.atmovies.com.tw/showtime/theater_t06609_a06.html
+
+## hw02 (lisp)
+*deadline 2015/04/26 Sun. 22:00*
+
+### 作業說明
+
+給予一個正整數N，和N個整數，利用**mergesort**算出排序後的結果
+
+### 參考教學與語法
+
+- ANSI Common Lisp 中文翻譯版
+http://acl.readthedocs.org/en/latest/
+- SBCL User Manual
+http://www.sbcl.org/manual/index.html
