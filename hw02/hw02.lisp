@@ -41,14 +41,12 @@
 	(half (length lst))
 )
 (defun mergesort (lst)
-	(format t "[process] call mergesort ~A~%" lst)
 	(cond
 		((<= (length lst) 1) lst)
 		(t (combine (mergesort (leftList lst (halfLength lst))) (mergesort(rightList lst (halfLength lst)))))
 	)
 )
 (defun combine (left right)
-	(format t "[process] call combine ~A ~A~%" left right)
 	(cond
 		((<= (length left) 0) right)
 		((<= (length right) 0) left)
@@ -72,15 +70,9 @@
 )
 ; main ()
 (
-	;let ( (N 5) ) ; (read) = 5
 	let ( (N (read)) )
-	(format t "[debug] N=~A.~%" N)
 	(
-		;let ( (lst '(4 3 1 5 2)) )
 		let ( (lst (readList N)) )
-		(format t "[debug] half ~A => ~A~%" N (half N))
-		(format t "[debug] leftList ~A (half ~A) => ~A~%" lst N (leftList lst (half N)))
-		(format t "[debug] rightList ~A (half ~A) => ~A~%" lst N (rightList lst (half N)))
 		(format t "~A~%" (mergesort lst))
 	)
 	nil
