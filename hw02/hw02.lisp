@@ -36,4 +36,4 @@
 	)
 )
 ; main ()
-(format t "~A~%" (mergesort (readList (read))))
+(format t "~{~A ~}~%" (mergesort (readList (read))))
