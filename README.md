@@ -83,6 +83,8 @@ http://210.34.136.253:8488/AIteach/chapt6.htm
 
 ### Problem 1 - Lowest Common Ancestor
 
+*deadline 2015/05/11 Mon. 22:00*
+
 #### 作業說明
 
 給予節點數與節點之間相對的祖先關係(Ancestor)後，找尋某兩點間的最低位階的共同祖先(Lowest Common Ancestor, 簡稱 LCA)。
