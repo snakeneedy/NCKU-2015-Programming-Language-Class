@@ -74,6 +74,8 @@ http://www.sbcl.org/manual/index.html
 
 ## hw03 (prolog)
 
+*deadline 2015/05/11 Mon. 22:00*
+
 ### 參考資料
 
 - KuoE0's Dots - Prolog 入門
@@ -82,8 +84,6 @@ http://kuoe0.logdown.com/tags/Prolog
 http://210.34.136.253:8488/AIteach/chapt6.htm
 
 ### Problem 1 - Lowest Common Ancestor
-
-*deadline 2015/05/11 Mon. 22:00*
 
 #### 作業說明
 
