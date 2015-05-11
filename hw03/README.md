@@ -51,9 +51,9 @@ demo :- write('Hello! Prolog'), nl, halt.
 - 條件上多個**or**連接的，只要前面出現**true**，後面便不會判斷/執行
 - 自己的觀察是：
 	- 若**當前的條件為true**時，會尋找最近的and，遇到or則結束<br/>
-	如`cond1, cond2; cond3`，若cond1為true，會找到and(`,`)連接的cond2；若cond2也為true，碰到or(`;`)結束
+	如`cond1, cond2; cond3`，若cond1為true，會找到and(`,`)連接的**cond2**；若cond2也為true，碰到or(`;`)結束
 	- 若**當前的條件為false**時，會尋找最近的or，沒有or則結束<br/>
-	如`cond1, cond2; cond3`，若cond1為false，會找到or(`,`)連接的cond3；若cond3也為false，沒有or(`;`)結束
+	如`cond1, cond2; cond3`，若cond1為false，會找到or(`;`)連接的**cond3**；若cond3也為false，沒有or(`;`)結束
 
 ## 參考資料
 
